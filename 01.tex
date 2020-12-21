@@ -1,0 +1,139 @@
+\documentclass{beamer}
+\usepackage{ctex, hyperref}
+\usepackage[T1]{fontenc}
+
+% other packages
+\usepackage{latexsym,amsmath,xcolor,multicol,booktabs,calligra}
+\usepackage{graphicx,pstricks,listings,stackengine}
+
+\author{\kaishu{汪洋}}
+\title{Introduction to OpenFOAM Programming}
+\subtitle{01-初始准备}
+\institute{\kaishu{武汉理工大学交通学院}}
+\date{\kaishu{2020年12月}}
+\usepackage{WUT}
+
+% defs
+\def\cmd#1{\texttt{\color{red}\footnotesize $\backslash$#1}}
+\def\env#1{\texttt{\color{blue}\footnotesize #1}}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\definecolor{halfgray}{gray}{0.55}
+
+\lstset{
+    basicstyle=\ttfamily\small,
+    keywordstyle=\bfseries\color{deepblue},
+    emphstyle=\ttfamily\color{deepred},    % Custom highlighting style
+    stringstyle=\color{deepgreen},
+    numbers=left,
+    numberstyle=\small\color{halfgray},
+    rulesepcolor=\color{red!20!green!20!blue!20},
+    frame=shadowbox,
+}
+
+
+\begin{document}
+
+\kaishu
+\begin{frame}
+    \titlepage
+    \begin{figure}[htpb]
+        \begin{center}
+            \includegraphics[width=0.15\linewidth]{pic/WUT.png}
+        \end{center}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+   \tableofcontents[sectionstyle=show,subsectionstyle=show/shaded/hide,subsubsectionstyle=show/shaded/hide]
+\end{frame}
+
+\section{课程目的}
+
+\begin{frame}{CFD中的开源软件}
+    \begin{itemize}
+        \item 简要介绍CFD中的开源软件
+        \item 如何使用OpenFOAM
+        \item 如何修改OpenFOAM
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{课程安排}
+    \begin{itemize}
+        \item 第一阶段旅程，2天
+        \item 第二阶段旅程，2天
+        \item 第三阶段旅程，2天
+        \item 汇报
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{第一阶段安排}
+    \begin{itemize}
+        \item 介绍OpenFOAM标准求解器、工具和相关库
+        \item 介绍Paraview(ParaFoam)进行后处理
+        \item 介绍OpenFOAM的tutorial的相关组织
+        \item 快速入门Python,Gnuplot等工具
+        \item 使用utilites和functionObjects做作业
+        \item 学会课后自学
+    \end{itemize}
+    
+\end{frame}
+
+\begin{frame}{第二、三阶段安排}
+    \begin{itemize}
+        \item OpenFOAM源码目录
+        \item 高级编程和编译-应用程序(求解器和工具)
+        \item C++快速课程和面向对象，目的为了阅读OF源码
+        \item 高级编程和编译-库(湍流模型和边界条件)
+        \item Debugging
+        \item 学会课后自学
+        \item 作业
+    \end{itemize}
+    
+\end{frame}
+
+\begin{frame}{课程收获}
+    \begin{itemize}
+        \item 学会下载、安装、编译和运行标准OpenFOAM求解器和工具
+        \item 学会何实现求解器和工具
+        \item 学会实现一个湍流模型
+        \item 学会实现一种边界条件
+        \item 学会基础的C++和面向对象
+        \item 学会利用Python,Gnuplot,Paraview等工具与OpenFOAM结合进行CFD计算。
+        \item 学会基础的Linux,Doxygen,Comilation,precedures,Debugging,Version control system和VTK
+        \item 学会用OpenFOAM做一个项目
+    \end{itemize}
+    
+\end{frame}
+
+\begin{frame}{参考}
+    \begin{itemize}
+        \item OpenFOAM, \url{www.openfoam.com}, \url{www.openfoam.org}, \url{www.foam-extend.org}
+        \item OpenFOAM Wiki: \url{www.openfoamwiki.net}
+        \item OpenFOAM User Guide, Programming Guide, Doxygen
+        \item OpenFOAM Forum: \url{www.cfd-online.com/Forums/openfoam/}
+        \item \cite{ferziger2002computational}
+        \item \cite{moukalled2016finite}
+        \item \cite{versteeg2007introduction}
+    \end{itemize}
+    
+\end{frame}
+
+
+\section{参考文献}
+
+\begin{frame}[allowframebreaks]
+    \bibliography{ref}
+    \bibliographystyle{alpha}
+    % 如果参考文献太多的话，可以像下面这样调整字体：
+    % \tiny\bibliographystyle{alpha}
+\end{frame}
+
+\begin{frame}
+    \begin{center}
+        {\Huge\calligra Thanks!}
+    \end{center}
+\end{frame}
+
+\end{document}
